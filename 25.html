@@ -1,0 +1,41 @@
+<html>
+<body>
+<h1>Linear Search</h1>
+<form name = "searchForm" action = "">
+<p>Anggur, Durian, Tomat, Bengkoang, Jeruk, Pepaya, Jambu, Manggis, Kelapa, Timun, pilih kata yang ingin diperiksa.<br />
+<br>
+<input name = "inputVal" type = "text" />
+<input name = "search" type = "button" value = "Search"
+onclick = "SearchArray()" /><br /></p>
+
+<p>Result<br />
+<input name = "result" type = "text" size = "30" /></p>
+
+<script>
+var a = ['Anggur', 'Durian', 'Tomat', 'Bengkoang', 'Jeruk', 
+  'Pepaya', 'Jambu', 'Manggis', 'Kelapa', 'Timun']
+
+function SearchArray()
+{
+var searchNum = searchForm.inputVal.value;
+
+var position = Search( a, searchNum );
+
+if ( position != -1 )
+searchForm.result.value =
+"The word is in position " +( position+1);
+else
+searchForm.result.value = "The word is not found";
+}
+
+function Search( theArray, key )
+{
+for ( var n = 0; n < theArray.length; ++n )
+if ( theArray[ n ] == key )
+return n;
+
+return -1;
+}
+</script>
+</body>
+</html>

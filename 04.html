@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+   function cek() 
+   {
+      var tahun = document.getElementById("tahun").value;
+      var str;
+
+      if(tahun % 4 == 0)
+      {
+         if(tahun % 100 == 0)
+         {
+           if(tahun % 400 == 0)
+           {
+              str = "Tahun " + tahun + " : kabisat";
+           }
+           else
+           {
+              str = "Tahun " + tahun + " : bukan kabisat";
+           }
+         }
+         else
+         {
+             str = "Tahun " + tahun + " : kabisat";   
+         }
+      }
+      else
+      {
+         str = "Tahun " + tahun + " : bukan kabisat";
+      }
+      document.getElementById("hasil").innerHTML = str;
+   }
+
+</script>
+</body>
+</html>

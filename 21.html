@@ -1,0 +1,86 @@
+<html>
+<body>
+<script>
+(function(){
+
+    var ConvertBase = function (num) {
+        return {
+            from : function (baseFrom) {
+                return {
+                    to : function (baseTo) {
+                        return parseInt(num, baseFrom).toString(baseTo);
+                    }
+                };
+            }
+        };
+    };
+        
+    // binary to decimal
+    ConvertBase.bin2dec = function (num) {
+        return ConvertBase(num).from(2).to(10);
+    };
+    
+    // binary to hexadecimal
+    ConvertBase.bin2hex = function (num) {
+        return ConvertBase(num).from(2).to(16);
+    };
+    
+    // decimal to binary
+    ConvertBase.dec2bin = function (num) {
+        return ConvertBase(num).from(10).to(2);
+    };
+    
+    // decimal to hexadecimal
+    ConvertBase.dec2hex = function (num) {
+        return ConvertBase(num).from(10).to(16);
+    };
+    
+    // hexadecimal to binary
+    ConvertBase.hex2bin = function (num) {
+        return ConvertBase(num).from(16).to(2);
+    };
+    
+    // hexadecimal to decimal
+    ConvertBase.hex2dec = function (num) {
+        return ConvertBase(num).from(16).to(10);
+    };
+  
+  	// hexadecimal to octal
+    ConvertBase.hex2oct = function (num) {
+        return ConvertBase(num).from(16).to(8);
+    };
+  
+  	// decimal to octal
+    ConvertBase.dec2oct = function (num) {
+        return ConvertBase(num).from(10).to(8);
+    };
+    
+  	// binary to octal
+    ConvertBase.bin2oct = function (num) {
+        return ConvertBase(num).from(2).to(8);
+    };
+  
+  	// octal to decimal
+    ConvertBase.oct2dec = function (num) {
+        return ConvertBase(num).from(8).to(10);
+    };
+  
+  	// octal to hexadecimal
+    ConvertBase.oct2hex = function (num) {
+        return ConvertBase(num).from(8).to(16);
+    };
+  
+  	// octal to binary
+    ConvertBase.oct2bin = function (num) {
+        return ConvertBase(num).from(8).to(2);
+    };
+  
+    this.ConvertBase = ConvertBase;
+    
+})(this);
+
+console.log(ConvertBase.dec2hex('10'));
+
+</script>
+</body>
+</html>

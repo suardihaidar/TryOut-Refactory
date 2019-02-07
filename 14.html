@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+const people = [
+  { id: 1, name: 'Udin', age: 12 },
+  { id: 1, name: 'Wati', age: 51 },
+  { id: 1, name: 'Budi', age: 34 },
+  { id: 1, name: 'Agus', age: 16 },
+  { id: 1, name: 'Sari', age: 19 },
+  { id: 1, name: 'Ririn', age: 21 },
+];
+
+const rate = people.map(function(item) {
+  if (item['age'] < 21) {
+    console.log('id: ' + item['id'] + ', name: ' + item['name'] + ', age: ' + item['age'])
+  }
+});
+</script>
+</body>
+</html>

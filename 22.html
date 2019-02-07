@@ -1,0 +1,102 @@
+<html>
+<title>Celsius to Fahrenheit Temperature Converter</title>
+<body>
+
+<h2>Celcius To Fahreinheit</h2>
+<p>Type a value in the Celsius field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+}
+</script>
+
+<h2>Celcius To Kelvin</h2>
+<p>Type a value in the Celsius field to convert the value to Kelvin:</p>
+
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="cel2kel(this.value)" onchange="cel2kel(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+<script>
+function cel2kel(val1) {
+  val1 = parseFloat(val1);
+  document.getElementById("outputKelvin").innerHTML=val1+273.15;
+}
+</script>
+
+<h2>Kelvin to Fahrenheit</h2>
+<p>Type a value in the Kelvin field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="kel2fah(this.value)" onchange="kel2fah(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit1"></span></p>
+
+<script>
+function kel2fah(val2) {
+  val2 = parseFloat(val2);
+  document.getElementById("outputFahrenheit1").innerHTML=((val2-273.15)*1.8)+32;
+}
+</script>
+
+<h2>Kelvin to Celsius</h2>
+<p>Type a value in the Kelvin field to convert the value to Celsius:</p>
+
+<p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="kel2cel(this.value)" onchange="kel2cel(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function kel2cel(val3) {
+  val3 = parseFloat(val3);
+  document.getElementById("outputCelcius").innerHTML=val3-273.15;
+}
+</script>
+
+<h2>Fahrenheit to Celsius</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="fah2cel(this.value)" onchange="fah2cel(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius1"></span></p>
+
+<script>
+function fah2cel(val4) {
+  val4 = parseFloat(val4);
+  document.getElementById("outputCelcius1").innerHTML=(val4-32)/1.8;
+}
+</script>
+
+<h2>Fahrenheit to Kelvin</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Kelvin:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="fah2kel(this.value)" onchange="fah2kel(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin1"></span></p>
+
+<script>
+function fah2kel(val5) {
+  val5 = parseFloat(val5);
+  document.getElementById("outputKelvin1").innerHTML=((val5-32)/1.8)+273.15;
+}
+</script>
+
+</body>
+</html>

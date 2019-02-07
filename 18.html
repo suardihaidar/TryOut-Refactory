@@ -1,0 +1,20 @@
+<html>
+<body>
+<script>
+const cities = ['Jakarta', 'Aceh', 'Malang', 'Medan', 'Bontang', 'Jogja', 
+	'Jakarta', 'Bandung', 'Malang', 'Solo', 'Palembang', 'Bandung'];
+
+const uniq = cities
+  .map((city) => {
+    return {count: 1, city: city}
+  })
+  .reduce((a, b) => {
+    a[b.city] = (a[b.city] || 0) + b.count
+    return a
+  }, {})
+
+const sorted = Object.keys(uniq).sort((a, b) => uniq[a] < uniq[b])
+console.log(sorted);
+</script>
+</body>
+</html>

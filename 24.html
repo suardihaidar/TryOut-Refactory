@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<h1 align="center">Stack</a></h1>
+<input type="text" id="input_form" value=""/>
+<br><br>
+<button id="tombolIn">IN</button>
+<button id="tombolOut">OUT</button>
+<script>
+document.getElementById("tombolIn").
+addEventListener("click", addData);
+ 
+document.getElementById("tombolOut").
+addEventListener("click", removeData);
+
+const name = ['lia', 'lisa', 'lie'];
+
+function addData() {
+	const val=document.getElementById("input_form").value;
+    name.unshift(val);
+    console.log(name);
+}
+ 
+function removeData(){
+    name.shift();
+    console.log(name);
+}
+</script>
+</body>
+</html>

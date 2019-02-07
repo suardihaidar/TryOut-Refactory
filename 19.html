@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+var countdown = function(value) {
+    if (value > 0) {
+        console.log(value);
+        return countdown(value - 1);
+    } else {
+        return value;
+    }
+};
+const number = prompt();
+countdown(number);
+</script>
+</body>
+</html>
